@@ -31,6 +31,7 @@ export class Preloader extends Scene
     preload ()
     {
         //  Load the assets for the game - Replace with your own assets
+        this.load.crossOrigin = 'anonymous';
         this.load.setPath('assets');
 
         for (let img of [

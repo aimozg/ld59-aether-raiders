@@ -80,13 +80,17 @@ export class GameUI extends Scene {
 		this.minimapPoint = this.add.rectangle(0, CFG.height, 8, 8, 0xffffa0).setOrigin(0.5, 0.5);
 	}
 
+	t0 = -1;
 	update(_time:number, _delta:number) {
 		this.tScore.setText(this.scoreText);
 		this.tDebug.setText(this.debugText);
 		this.tLog.setText(this.logText.join('\n'));
 		this.tHint.setText(this.hintText);
 
-		if (_time > 15000) {
+		if (this.t0 < 0) {
+			this.t0 = _time;
+		}
+		if (_time-this.t0 > 15000) {
 			this.tTutorial.visible = false;
 		}
 
