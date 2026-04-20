@@ -1,0 +1,25 @@
+{
+  "name": "ld59-aether-raiders",
+  "description": "A Phaser game for Ludum Dare 59.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phaserjs/template-vite-ts.git"
+  },
+  "author": "aimozg",
+  "license": "MIT",
+  "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
+  "scripts": {
+    "dev": "vite --config vite/config.dev.mjs",
+    "build": "vite build --config vite/config.prod.mjs"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.3.1"
+  },
+  "dependencies": {
+    "phaser": "4.0.0",
+    "simplex-noise": "^4.0.3",
+    "terser": "^5.39.0"
+  }
+}
